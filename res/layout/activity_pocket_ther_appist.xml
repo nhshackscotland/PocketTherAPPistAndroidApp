@@ -9,8 +9,34 @@
     tools:context=".PocketTherAPPist" >
 
     <TextView
+        android:id="@+id/suds_heading_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:text="@string/suds_heading" />
+
+    <SeekBar
+        android:id="@+id/suds_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/suds_heading_display"
+        android:layout_marginTop="103dp" />
+
+    <TextView
+        android:id="@+id/suds_level_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/suds_slider"
+        android:layout_marginTop="20dp"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/suds_submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/suds_level_display"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:text="@string/suds_submit" />
 
 </RelativeLayout>
