@@ -25,15 +25,6 @@
         android:layout_alignLeft="@+id/startingSudsPrompt"
         android:layout_centerVertical="true" />
 
-    <TextView
-        android:id="@+id/startingSudsPrompt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/startingSudsSlider"
-        android:layout_alignLeft="@+id/startingSudsSlider"
-        android:layout_marginBottom="44dp"
-        android:text="@string/starting_suds_level" />
-
     <EditText
         android:id="@+id/newActivityTextBox"
         android:layout_width="wrap_content"
@@ -49,9 +40,10 @@
         android:id="@+id/starting_suds_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/startingSudsPrompt"
         android:layout_below="@+id/newActivityTextBox"
         android:layout_marginTop="20dp"
-        android:text="@string/suds_default" />
+        android:text="" />
 
     <Button
         android:id="@+id/newActivityCancelButton"
@@ -72,5 +64,13 @@
         android:layout_marginLeft="22dp"
         android:layout_marginTop="81dp"
         android:text="@string/new_activity_submit" />
+
+    <TextView
+        android:id="@+id/startingSudsPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/starting_suds_display"
+        android:layout_marginTop="18dp"
+        android:text="@string/starting_suds_level" />
 
 </RelativeLayout>

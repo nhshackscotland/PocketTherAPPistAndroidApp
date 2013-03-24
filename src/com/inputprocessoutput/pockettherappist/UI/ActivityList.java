@@ -1,6 +1,6 @@
 package com.inputprocessoutput.pockettherappist.UI;
 
-import java.util.Date;
+//import java.util.Date;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -103,6 +103,17 @@ public class ActivityList extends Activity {
 				Storage s = new Storage(this);
 				s.storeSuds(); */
 				startActivity(new Intent(ActivityList.this, PocketTherAPPist.class).putExtra("activity", current_activity)); 
+
+				// TODO Auto-generated method stub
+
+			}
+		});
+		
+		Button ab6=(Button) findViewById(R.id.addNewActivity);
+		ab6.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(ActivityList.this, AddNewActivity.class)); 
 
 				// TODO Auto-generated method stub
 
