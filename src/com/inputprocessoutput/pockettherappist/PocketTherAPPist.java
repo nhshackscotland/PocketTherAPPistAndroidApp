@@ -14,14 +14,22 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import java.util.Date;
 
+import com.inputprocessoutput.pockettherappist.Model.Suds;
 import com.inputprocessoutput.pockettherappist.UI.Encouragement;
 
 public class PocketTherAPPist extends Activity {
+	String passed_activity;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_pocket_ther_appist);
+
+
+		Bundle extras = getIntent().getExtras();
+		if (extras != null) {
+			 passed_activity = extras.getString("activity");
+		}
 
 		SeekBar sb1=(SeekBar) findViewById(R.id.suds_slider);
 		sb1.setMax(100);
@@ -53,11 +61,12 @@ public class PocketTherAPPist extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				//String current_activity = ;
+				String current_activity = passed_activity;
 				int current_suds = R.id.suds_level_display;
 				long current_time = new Date().getTime();
-			/*	Storage s = new Storage(this);
-				s.storeSuds(); */
+				Suds s = new Suds(current_activity, current_suds, current_time);
+				Storage store = new Storage(PocketTherAPPist.this);
+				store.storeSuds(s); 
 				startActivity(new Intent(PocketTherAPPist.this, Encouragement.class)/*.putExtra("suds", R.id.suds_level_display).putExtra("time", current_time)*/); 
 
 				// TODO Auto-generated method stub

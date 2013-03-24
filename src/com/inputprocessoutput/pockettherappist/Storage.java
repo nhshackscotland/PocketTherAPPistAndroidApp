@@ -42,7 +42,7 @@ public class Storage extends SQLiteOpenHelper {
         		BaseColumns._ID + " INTEGER PRIMARY KEY NOT NULL, " +
         		" activity STRING NULL, "+
         		" suds INTEGER NULL, "+
-        		" time LONG NULL, "+
+        		" time LONG NULL "+
         		");");
     }
 

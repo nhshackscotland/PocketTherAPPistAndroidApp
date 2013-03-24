@@ -28,6 +28,16 @@ public class Encouragement extends Activity {
 			}
 		});
 
+		Button eb2=(Button) findViewById(R.id.end_session);
+		eb2.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(Encouragement.this, ActivityList.class)); 
+
+				// TODO Auto-generated method stub
+			}
+		});
+
 	}
 
 }

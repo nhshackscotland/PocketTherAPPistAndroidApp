@@ -16,6 +16,12 @@ public class Suds {
 		this.suds = suds;
 		this.time = time;
 	}
+	public Suds(String activity, int suds, long time) {
+		super();
+		this.activity = activity;
+		this.suds = suds;
+		this.time = time;
+	}
 
 	public int getId() {
 		return id;
