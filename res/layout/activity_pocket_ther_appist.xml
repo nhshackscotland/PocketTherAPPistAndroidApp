@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/suds_slider"
         android:layout_marginTop="20dp"
-        android:text="0" />
+        android:text="@string/suds_default" />
 
     <Button
         android:id="@+id/suds_submit_button"

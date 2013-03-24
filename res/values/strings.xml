@@ -4,6 +4,7 @@
     <string name="app_name">Pocket TherAPPist</string>
     <string name="action_settings">Settings</string>
     <string name="suds_heading">Select your current anxiety level:</string>
+    <string name="suds_default">0</string>
     <string name="suds_submit">Submit</string>
 
 </resources>

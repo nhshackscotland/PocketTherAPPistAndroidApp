@@ -2,10 +2,17 @@ package com.inputprocessoutput.pockettherappist;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
+import java.util.Date;
 
 public class PocketTherAPPist extends Activity {
 
@@ -39,7 +46,21 @@ public class PocketTherAPPist extends Activity {
             }
         });
         
-    }
+        Button b1=(Button) findViewById(R.id.suds_submit_button);
+        b1.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				long current_time = new Date().getTime();
+				Storage s = new Storage(this);
+				s.storeSuds();
+				startActivity(new Intent(this, encouragement.class).putExtra("suds", R.id.suds_level_display).putExtra("time", current_time)); 
+			
+				// TODO Auto-generated method stub
+				
+			}
+		
+        
 
 
     @Override
@@ -49,4 +70,6 @@ public class PocketTherAPPist extends Activity {
         return true;
     }
     
-}
+});
+        }
+    }
